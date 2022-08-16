@@ -1,0 +1,94 @@
+<app-header></app-header>
+
+
+<div class="my-container">
+    <img  src="https://wydden.com/wp-content/uploads/2016/01/outil-rendez-vous-690x345-1.png" style="width: 50%; height: 70%; margin-top: 300px;">
+<div class="main" >  
+<div class="w3-center w3-padding-64" id="prise">
+    <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16" style="font-weight: bold;">Demander un rendez-vous</span>
+  </div>
+    
+    <!--<form #p="ngForm" (ngSubmit)="add(p)">
+
+    
+    <p><input class="form-group" type="text" placeholder="Nom et prénom" required name="nom-prénom"  #nomprénom="ngModel" ngModel required  ></p>
+    
+    
+    <p><input class="form-group" type="text" placeholder="numéro de télèphone" required name="tel"  #tél="ngModel" ngModel required  ></p>
+
+    <p><input class="form-group" type="datetime" placeholder="Date de naissance" required name="Date de naissance" #nomprénom="ngModel" ngModel required  ></p>
+    
+
+    <p class="form" > Genre
+        <input  type="radio"  id="chk" value="homme"  name="genre" #homme="ngModel" ngModel required   >
+        <label>Homme</label>
+        <input   type="radio" id="chk" value="femme"  name="genre"    #femme="ngModel" ngModel required  >
+        <label>Femme</label>
+   </p>
+
+   <p class="form" > Première visite?
+        <input  type="radio"  id="chk" value="oui"  name="visite" #oui="ngModel" ngModel required   >
+        <label>Oui</label>
+        <input   type="radio" id="chk" value="non"   name="visite"   #non="ngModel" ngModel required  >
+        <label>Non</label>
+   </p>
+                    
+    
+      <p class="form" > Sélectionnez une date de rendez-vous</p>
+      <p><input class="form-group" type="datetime-local" placeholder="Date and time" id="name"  required name="date" value="2022-08-04T10:00"   #date="ngModel" ngModel required ></p>
+     
+    <p><input class="form-group" type="text" placeholder="Message \ plus d'informations" required name="Message"  #info="ngModel" ngModel required  ></p>-->
+    
+    
+    
+    <form  class="w3-container" action="/action_page.php" target="_blank" #p="ngForm" (ngSubmit)="add(p)">
+    
+        <div class="w3-section">
+            <label>Nom et prénom</label>
+            <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Name" required name="nom-prénom"  #nomprénom="ngModel" ngModel required >
+          </div>
+    
+          <div class="w3-section">
+            <label>Numéro de télèphone</label>
+            <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="tel" required name="numéro de télèphone"  #tel="ngModel" ngModel required >
+          </div>
+    
+          <div class="w3-section">
+            <label>Date de naissance</label>
+            <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="date" name="date" required name="date de naissance"  #date="ngModel" ngModel required >
+          </div>
+    
+          <div class="w3-section">
+            <label>Sélectionnez une date de rendez-vous</label>
+            <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="datetime-local" name="date" required name="date de naissance"  #date="ngModel" ngModel required >
+          </div>
+
+        
+    <p class="form" > Genre :
+        <input  type="radio"  id="chk" value="homme"  name="genre" #homme="ngModel" ngModel required   >
+        <label>Homme</label>
+        <input   type="radio" id="chk" value="femme"  name="genre"    #femme="ngModel" ngModel required  >
+        <label>Femme</label>
+   </p>
+
+   <p class="form" > Première visite?
+        <input  type="radio"  id="chk" value="oui"  name="visite" #oui="ngModel" ngModel required   >
+        <label>Oui</label>
+        <input   type="radio" id="chk" value="non"   name="visite"   #non="ngModel" ngModel required  >
+        <label>Non</label>
+   </p>
+    
+    <div class="w3-section">
+        <label>Message \ plus d'informations</label>
+        <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Message" required name="Message" #message="ngModel" ngModel required >
+      </div>
+
+      
+    
+    <button type="submit" class="w3-button w3-block w3-black">Enregistrer</button>
+    
+    </form>
+    
+    </div>
+    
+    <app-footer></app-footer>

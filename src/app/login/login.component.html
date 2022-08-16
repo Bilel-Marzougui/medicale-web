@@ -1,0 +1,49 @@
+
+  <app-header></app-header>
+       
+          <div class="my-container">
+            <div class="main" >  
+            <div class="w3-center w3-padding-64" id="login">
+                <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16" style="font-weight: bold;">Login</span>
+              </div>
+    
+              <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+              <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    
+    
+               <div class="icon">
+            <i class="fas fa-user-circle"></i>
+          </div>
+
+          <form class="w3-container" action="/action_page.php" target="_blank" #f="ngForm" (ngSubmit)="add(f)">
+            <div class="w3-section" >
+              <label>Email</label>
+              <input  class="w3-input w3-border w3-hover-border-black" id="Email" style="width:100%;" type="text" name="email" required ngModel>
+            <span class="envelope"  > <i class="fa fa-envelope" ></i></span>
+            </div>
+    
+    
+            <div class="w3-section">
+                <label>Mot de passe</label>
+                <input class="w3-input w3-border w3-hover-border-black" style="width:100%;"  name="password" required ngModel [type]="changetype?'password':'text'">
+              <span class="eyeicon" (click)="viewpass()"> <i [ngClass]="visible?' fa fa-eye-slash' :' fa fa-eye'"></i>
+              </span>
+    
+            </div>
+    
+            <button type="submit" class="w3-button w3-block w3-black" style="margin-top:50px;">Login</button>
+          </form>
+          <p class="p">Not have an account?<a routerLink="/register"> Register here</a></p>
+        
+</div>
+ 
+
+<footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+    <div class="w3-xlarge w3-section">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-instagram"></i>
+      <i class="fa fa-snapchat w3-hover-opacity"></i>
+      <i class="fab fa-pinterest"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-linkedin-in"></i>
+    </div>

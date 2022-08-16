@@ -1,0 +1,31 @@
+<div class="main" >
+    <div class="center">
+        <h1>Register</h1>
+    </div>
+
+    <form #f="ngForm" (ngSubmit)="add(f)">
+      <input type="text" class="form-group" name= "First name " placeholder="first name" #firstname="ngModel" ngModel required >
+      <br>
+      <input type="text"class="form-group"  name= "Last name " placeholder="last name" #lastname="ngModel" ngModel required >
+      <br>
+      <input type="text"class="form-group" name= "Email " placeholder="Email" #Email="ngModel" ngModel required>
+      <br>
+      <input type="text"class="form-group" name= "Password " placeholder="password" #password="ngModel" ngModel required>
+      <br>
+      <input type="text"class="form-group" name= "Confirm password" placeholder="confirm password"  #confirm password="ngModel"ngModel required >
+      <br>
+    
+    
+      <input type="checkbox" id="chk" aria-hidden="true" name="b" #b="ngModel"ngModel required ><p class="p" >I agree to the website terms and conditions</p>
+      
+      <br>
+      <button type="submit" [disabled]="b.invalid" class="btn btn-primary">Register</button>
+    
+    </form>
+    
+    <p class="p">Already have an account?<a routerLink="/login"> login here</a></p>
+            
+    </div>
+    
+    
+   

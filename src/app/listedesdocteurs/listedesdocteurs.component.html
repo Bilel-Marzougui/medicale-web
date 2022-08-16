@@ -1,0 +1,101 @@
+<div class="center">
+    <h1>Liste des docteurs</h1>
+  </div>
+  <table class="table">
+      <thead>
+        <tr>
+         
+          <th scope="col">Nom et prénom</th>
+          <th scope="col">Adresse</th>
+          <th scope="col">E-mail</th>
+          <th scope="col">Télèphone</th>
+          <th scope="col">Invitation</th>
+        </tr>
+  
+      </thead>
+      <tbody>
+  
+        <tr>
+          <td> <span data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-user "></i> </span>&nbsp; Mark</td>
+          <td> Otto</td>
+          <td>@mdo</td>
+          <td>1236</td>
+          <td>
+            <i class="fa fa-user-plus" (click)="go()"></i>
+          </td>
+        <tr>
+          <td> <span data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-user "></i> </span> &nbsp; Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+          <td>1236</td>
+          <td> 
+            <span click event="pers">
+              <i class="fa fa-user-plus" (click)="go()"></i>
+          </span>
+          </td>
+  
+        </tr>
+  
+        <tr>
+          <td> <span data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-user "></i> </span>&nbsp; Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+          <td>1236</td>
+          <td>
+            <i class="fa fa-user-plus" (click)="go()"></i>
+            
+          </td>
+        </tr>
+  
+        <tr>
+          <td> <span data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-user "></i> </span> &nbsp; mart</td>
+          <td>fdss</td>
+          <td>@dev</td>
+          <td>1236</td>
+          <td>
+            <i class="fa fa-user-plus" (click)="go()"></i>
+          </td>
+        </tr>
+  
+        <tr>
+          <td><span data-toggle="modal" data-target="#exampleModal"> <i class="fa fa-user "></i> </span> &nbsp; marie</td>
+          <td>tdee</td>
+          <td>@las</td>
+          <td>1236</td>
+          <i class="fa fa-user-plus" (click)="go()"></i>
+        </tr>
+  
+      </tbody>
+    </table>
+    
+  
+  <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Informations médecin</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Nom et prénom:<br>
+        Spécialité:<br>
+        Autres informations:
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  
+  
+  
+  
+  
+    

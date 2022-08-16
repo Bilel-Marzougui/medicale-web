@@ -1,0 +1,11 @@
+ .center {
+    display: flex;
+    justify-content: center;
+    color:#6d44b8;
+  }
+  
+.table, th , td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+} 
