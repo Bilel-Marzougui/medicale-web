@@ -9,6 +9,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
 
 
 import { RegisterComponent } from './register/register.component';
@@ -21,6 +23,8 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { ListPatientComponent } from './list-patient/list-patient.component';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +38,8 @@ import { HeaderComponent } from './header/header.component';
     HomeComponent,
     ContactComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    ListPatientComponent
 
   ],
   
@@ -47,7 +52,9 @@ import { HeaderComponent } from './header/header.component';
     MatRadioModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatInputModule,
+    MatButtonModule
 
 
 

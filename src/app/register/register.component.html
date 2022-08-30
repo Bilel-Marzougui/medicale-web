@@ -1,31 +1,77 @@
+<div class="my-container">
 <div class="main" >
-    <div class="center">
-        <h1>Register</h1>
-    </div>
+  
+      <div class="w3-center w3-padding-64" id="Register">
+        <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16" style="font-weight: bold;">Register</span>
+      </div>
+      <form class="w3-container" action="/action_page.php" target="_blank">
+        <div class="w3-section">
+          <label>Nom</label>
+          <br>
+          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Nom" required>
+        </div>
+        <div class="w3-section">
+          <label>Prénom</label>
+          <br>
+          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Prénom" required>
+        </div>
+        <div class="w3-section">
+          <label>Email</label>
+          <br>
+          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Email" required>
+        </div>
+     
+      <div class="w3-section">
+        <label>Mot de passe</label>
+        <br>
+        <input matInput [type]="showPassword ? 'text' : 'password'" name="password"class="w3-input w3-border w3-hover-border-black" style="width:100%;" [type]="showPassword?'password':'text'" name="Mot de passe" required>
+        <!-- <i class="fa fa-eye" matSuffix (click)="visibility()" >{{showPassword?'visibility_off':'visibility'}} </i> -->
+        <!-- <mat-icon matSuffix (click)="togglePasswordVisibility()">
+          {{showPassword?'visibility_off':'visibility'}}
+      </mat-icon> -->
+      </div>
+      <div class="w3-section">
+        <label>Confirmer Mot de passe</label>
+        <br>
+        <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="password"
+         name="Confirmer mot de passe" required>
+      </div>
+    
+      <div>Catégorie</div>
+      <select #categorie [(ngModel)]="Categorie" name="cat" class="w3-input w3-border w3-hover-border-black" style="width:100%;">
+        <option *ngFor='let categorie of CategorieChoices'>{{categorie}}</option>
+      </select>
+      <div *ngIf="categorie.selectedIndex === categorie.options.length - 1">
+        <div class="w3-section">
+          <label>Specialite</label>
+          <br>
+          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Specialite" required>
+        </div>
+        <br>
+        <div class="w3-section">
+          <label>Adress</label>
+          <br>
+          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Specialite" required>
+        </div>
+  
+        <br>
+        <div class="w3-section">
+          <label>Contact</label>
+          <br>
+          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Specialite" required>
+        </div>
+      </div>
+    
 
-    <form #f="ngForm" (ngSubmit)="add(f)">
-      <input type="text" class="form-group" name= "First name " placeholder="first name" #firstname="ngModel" ngModel required >
-      <br>
-      <input type="text"class="form-group"  name= "Last name " placeholder="last name" #lastname="ngModel" ngModel required >
-      <br>
-      <input type="text"class="form-group" name= "Email " placeholder="Email" #Email="ngModel" ngModel required>
-      <br>
-      <input type="text"class="form-group" name= "Password " placeholder="password" #password="ngModel" ngModel required>
-      <br>
-      <input type="text"class="form-group" name= "Confirm password" placeholder="confirm password"  #confirm password="ngModel"ngModel required >
-      <br>
-    
-    
       <input type="checkbox" id="chk" aria-hidden="true" name="b" #b="ngModel"ngModel required ><p class="p" >I agree to the website terms and conditions</p>
-      
-      <br>
-      <button type="submit" [disabled]="b.invalid" class="btn btn-primary">Register</button>
+      <button type="submit"  [disabled]="b.invalid" class="w3-button w3-block w3-black">Enregistrer</button>
     
     </form>
     
     <p class="p">Already have an account?<a routerLink="/login"> login here</a></p>
             
     </div>
+</div>
     
     
    
