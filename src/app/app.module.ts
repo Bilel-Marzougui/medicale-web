@@ -38,7 +38,7 @@ import { SpecialitesComponent } from './specialites/specialites.component';
     ContactComponent,
     FooterComponent,
     HeaderComponent,
-    ListPatientComponent
+    ListPatientComponent,
     SpecialitesComponent
 
   ],

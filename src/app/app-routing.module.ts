@@ -21,8 +21,7 @@ const routes: Routes = [
   {path:'dialog-exp',component:DialogExpComponent},
   {path:'home',component:HomeComponent},
   {path:'contact',component:ContactComponent},
-  {path :'list-patient',component:ListPatientComponent}
-
+  {path :'list-patient',component:ListPatientComponent},
   {path:'specialites',component:SpecialitesComponent}
 
 ];
