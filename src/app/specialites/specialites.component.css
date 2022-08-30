@@ -3,7 +3,7 @@
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    background: hsl(293, 26%, 47%);
+    background: hsl(300, 3%, 62%);
     border: .75em solid white;
     padding: 2em;
     font-family: 'Open Sans', sans-serif;
@@ -31,7 +31,7 @@
     line-height: 1;
     padding-bottom: .5em;
     /* margin: 0 0 0.142857143em; */
-    border-bottom: 2px solid #753BBD;
+    border-bottom: 2px solid #7f7c84;
     transition: color .45s ease, border .45s ease;
   }
   
@@ -47,7 +47,7 @@
   }
   
   :hover  {
-    background: #753BBD;
+    background: #736f78;
   }
     
     p {
