@@ -1,3 +1,7 @@
+.my-container{
+    background-color: rgb(235, 228, 228);
+
+ }
 body{
 	margin: 0;
 	padding: 0;
@@ -11,25 +15,16 @@ body{
 .main{
     margin-left: auto;
     margin-right: auto;
-	width: 400px;
-	height:800px;
+	width: 450px;
+	height:1500px;
 	overflow: hidden;
 	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+	background-color: white;
 	border-radius: 10px;
 	box-shadow: 5px 20px 50px #000;
 }
-input{
-	width: 60%;
-	height: 40px;
-	background: #e0dede;
-	justify-content: center;
-	display: flex;
-	margin: 20px auto;
-	padding: 10px;
-	border: none;
-	outline: none;
-	border-radius: 5px;
-    margin-bottom:0.2em;
+.w3-section:focus-within{
+	transform:scale(1.05,1.05);
 }
 button{
 	width: 30%;
@@ -67,4 +62,10 @@ button:hover{
 #chk{
 	width: 30%;
 	height: 20px;
+}
+.eyeicon{
+	display: flex;
+	margin-top: -30px;
+	margin-left: 390px;
+
 }
