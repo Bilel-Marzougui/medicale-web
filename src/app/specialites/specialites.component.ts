@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router, RouterModule } from '@angular/router'
 @Component({
   selector: 'app-specialites',
   templateUrl: './specialites.component.html',
@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpecialitesComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private router : Router) { }
+  listedesdocteurs:"/listedesdocteurs"
   ngOnInit(): void {
+
+  }
+  listeDoctor(val) :void{
+    
+    this.router.navigate(['/listedesdocteurs/'+val])
   }
 
 }

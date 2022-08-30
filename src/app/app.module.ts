@@ -11,8 +11,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-
-
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { PrisedesrendezVousComponent } from './prisedesrendez-vous/prisedesrendez-vous.component';
@@ -25,6 +23,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ListPatientComponent } from './list-patient/list-patient.component';
 
+import { SpecialitesComponent } from './specialites/specialites.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +39,7 @@ import { ListPatientComponent } from './list-patient/list-patient.component';
     FooterComponent,
     HeaderComponent,
     ListPatientComponent
+    SpecialitesComponent
 
   ],
   
