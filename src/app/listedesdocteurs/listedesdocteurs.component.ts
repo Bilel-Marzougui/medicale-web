@@ -16,5 +16,6 @@ export class ListedesdocteursComponent implements OnInit {
       this.router.navigate(["prisedesrendez-vous"])
       
   }
+  
 
 }

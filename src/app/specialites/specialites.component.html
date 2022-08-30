@@ -1,8 +1,8 @@
-<br>
+<app-header></app-header>
   <div class="row">
     <div class="col-sm-4">
       <div class="card">
-        <a [routerLink]="['../listedesdocteurs']" [queryParams]="{spec: 'Cardiologie'}" class="data-card">
+          <a (click)="listeDoctor('Cardiologies')" class="data-card">
           <h2>Cardiologie </h2>
           <span class="link-text">
             liste des docteurs
@@ -16,7 +16,7 @@
     </div>
     <div class="col-sm-4">
       <div class="card">
-        <a [routerLink] ="['../listedesdocteurs']" [queryParams]="{spec: 'Neurologie'}" class="data-card">
+        <a (click)="listeDoctor('Neurologie')" class="data-card">
           <h2> Neurologie </h2>
           <span class="link-text">
             liste des docteurs
@@ -29,7 +29,7 @@
     </div>
     <div class="col-sm-4">
         <div class="card">
-          <a [routerLink]="['../listedesdocteurs']" [queryParams]="{spec: 'Orthopedie'}" class="data-card">
+          <a (click)="listeDoctor('Orthopédie')" class="data-card">
             <h2> Orthopédie </h2>
             <span class="link-text">
               liste des docteurs
@@ -45,7 +45,7 @@
   <div class="row">
     <div class="col-sm-4">
       <div class="card">
-        <a [routerLink]="['../listedesdocteurs']" [queryParams]="{spec: 'Genycologie'}" class="data-card">
+        <a (click)="listeDoctor('Génycologie')" class="data-card">
           <h2> Génycologie </h2>
           <span class="link-text">
             liste des docteurs
@@ -59,7 +59,7 @@
     </div>
     <div class="col-sm-4">
       <div class="card">
-        <a [routerLink]="['../listedesdocteurs']" [queryParams]="{spec: 'Ophtalmologie'}" class="data-card">
+        <a (click)="listeDoctor('Ophtalmologie')" class="data-card">
           <h2> Ophtalmologie </h2>
           <span class="link-text">
             liste des docteurs
@@ -72,7 +72,7 @@
     </div>
     <div class="col-sm-4">
         <div class="card">
-          <a [routerLink]="['../listedesdocteurs']" [queryParams]="{spec: 'Medecine-dentaire'}" class="data-card">
+          <a (click)="listeDoctor('Médecine dentaire')" class="data-card">
             <h2>Médecine dentaire </h2>
             <span class="link-text">
               liste des docteurs
@@ -88,7 +88,7 @@
 <div class="row">
   <div class="col-sm-4">
     <div class="card">
-      <a [routerLink]="['../listedesdocteurs']" [queryParams]="{spec: 'Pédiatrie'}" class="data-card">
+      <a (click)="listeDoctor('Pédiatrie')" class="data-card">
         <h2> Pédiatrie </h2>
         <span class="link-text">
           liste des docteurs
@@ -102,7 +102,7 @@
   </div>
   <div class="col-sm-4">
     <div class="card">
-      <a [routerLink]="['../listedesdocteurs']" [queryParams]="{spec: 'Dermatologie'}" class="data-card">
+      <a (click)="listeDoctor('Dermatologie')" class="data-card">
         <h2> Dermatologie </h2>
         <span class="link-text">
           liste des docteurs
@@ -115,7 +115,7 @@
   </div>
   <div class="col-sm-4">
       <div class="card">
-        <a [routerLink]="['../listedesdocteurs']" [queryParams]="{spec: 'Pneumologie'}" class="data-card">
+        <a (click)="listeDoctor('Pneumologie ')" class="data-card">
           <h2> Pneumologie </h2>
           <span class="link-text">
             liste des docteurs
@@ -127,3 +127,6 @@
       </div>
     </div>
 </div>
+
+
+<app-footer></app-footer>

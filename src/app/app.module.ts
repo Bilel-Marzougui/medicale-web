@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
+
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { PrisedesrendezVousComponent } from './prisedesrendez-vous/prisedesrendez-vous.component';
@@ -21,7 +22,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
-
+import { SpecialitesComponent } from './specialites/specialites.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { HeaderComponent } from './header/header.component';
     HomeComponent,
     ContactComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    SpecialitesComponent
 
   ],
   
