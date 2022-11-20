@@ -8,9 +8,11 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { PrisedesrendezVousComponent } from './prisedesrendez-vous/prisedesrendez-vous.component';
@@ -22,8 +24,11 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ListPatientComponent } from './list-patient/list-patient.component';
-
 import { SpecialitesComponent } from './specialites/specialites.component';
+import {MatSnackBar} from '@angular/material/snack-bar';
+
+
+
 
 @NgModule({
   declarations: [
@@ -39,7 +44,8 @@ import { SpecialitesComponent } from './specialites/specialites.component';
     FooterComponent,
     HeaderComponent,
     ListPatientComponent,
-    SpecialitesComponent
+    SpecialitesComponent,
+    
 
   ],
   
@@ -54,7 +60,12 @@ import { SpecialitesComponent } from './specialites/specialites.component';
     MatFormFieldModule,
     MatSnackBarModule,
     MatInputModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+
+   
+  
 
 
 
