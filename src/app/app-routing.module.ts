@@ -11,18 +11,20 @@ import { RegisterComponent } from './register/register.component';
 import {SpecialitesComponent} from './specialites/specialites.component'
 
 import { ListPatientComponent } from './list-patient/list-patient.component';
-
+import{AuthGuard} from './auth.guard';
 const routes: Routes = [
+  {path:'',redirectTo:'/home',pathMatch:'full'},
   {path:'register',component:RegisterComponent},
   {path:'login',component:LoginComponent},
   {path:'listedesdocteurs/:spe',component:ListedesdocteursComponent},
-  {path:'prisedesrendez-vous',component:PrisedesrendezVousComponent},
-  {path:'listedesrendez-vous',component:ListedesrendezVousComponent},
+  {path:'prisedesrendez-vous',component:PrisedesrendezVousComponent,canActivate:[AuthGuard]},
+  {path:'listedesrendez-vous',component:ListedesrendezVousComponent,canActivate:[AuthGuard]},
   {path:'dialog-exp',component:DialogExpComponent},
   {path:'home',component:HomeComponent},
   {path:'contact',component:ContactComponent},
-  {path :'list-patient',component:ListPatientComponent},
-  {path:'specialites',component:SpecialitesComponent}
+  {path :'list-patient',component:ListPatientComponent,canActivate:[AuthGuard]},
+  {path:'specialites',component:SpecialitesComponent,canActivate:[AuthGuard]}
+
 
 ];
 

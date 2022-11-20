@@ -15,23 +15,57 @@
             <i class="fas fa-user-circle"></i>
           </div>
 
+
+
+          <div class="choix">
+            <mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style"
+              #group="matButtonToggleGroup" [value]="selectedVal" (change)="onValChange(group.value)">
+
+              <mat-button-toggle value="medecin" id="1" (click)="onReset(1)" class="medecin" checked>Medecin
+              </mat-button-toggle>
+
+              <mat-button-toggle value="Patient"  id="2" (click)="onReset(2)" class="patient"> Patient </mat-button-toggle>
+            </mat-button-toggle-group>
+
+          </div>
+<!-- 
+          <div class="switch" [ngSwitch]="selectedVal">
+
+            <div class="medecinlog" *ngSwitchCase="'Medecin'" (ngSubmit)="onSubmit()"></div>
+              
+            </div> -->
+
+   
+
+
+
           <form class="w3-container" action="/action_page.php" target="_blank" #f="ngForm" (ngSubmit)="add(f)">
             <div class="w3-section" >
-              <label>Email</label>
-              <input  class="w3-input w3-border w3-hover-border-black" id="Email" style="width:100%;" type="text" name="email" required ngModel>
+              <label>email</label>
+              <input  class="w3-input w3-border w3-hover-border-black" id="Email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" style="width:100%;" type="text" name="email" required ngModel #email="ngModel">
             <span class="envelope"  > <i class="fa fa-envelope" ></i></span>
+
+            <div class="alert alert-danger" role="alert" *ngIf="email.errors?.required && email.touched">
+              le contenu est vide
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="email.errors?.pattern && email.touched">
+              le contenu est invalide
+            </div>
             </div>
     
     
             <div class="w3-section">
-                <label>Mot de passe</label>
-                <input class="w3-input w3-border w3-hover-border-black" style="width:100%;"  name="password" required ngModel [type]="changetype?'password':'text'">
+                <label>mot de passe</label>
+                <input class="w3-input w3-border w3-hover-border-black" style="width:100%;"  name="password" required ngModel [type]="changetype?'password':'text'" #password="ngModel">
+
               <span class="eyeicon" (click)="viewpass()"> <i [ngClass]="visible?' fa fa-eye-slash' :' fa fa-eye'"></i>
               </span>
+              <div class="alert alert-danger" role="alert" *ngIf="password.errors?.required && password.touched">
+                le contenu est vide
+              </div>
     
             </div>
-    
-            <button type="submit" class="w3-button w3-block w3-black" style="margin-top:50px;">Login</button>
+             <button type="submit" class="w3-button w3-block w3-black" style="margin-top:50px;"   >Login</button>
           </form>
           <p class="p">Not have an account?<a routerLink="/register"> Register here</a></p>
         

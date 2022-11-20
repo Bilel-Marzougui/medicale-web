@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, Validators} from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { PrisedesrendezVousComponent } from './prisedesrendez-vous/prisedesrendez-vous.component';
@@ -22,9 +23,9 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ListPatientComponent } from './list-patient/list-patient.component';
-
 import { SpecialitesComponent } from './specialites/specialites.component';
 
+ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,8 +40,9 @@ import { SpecialitesComponent } from './specialites/specialites.component';
     FooterComponent,
     HeaderComponent,
     ListPatientComponent,
-    SpecialitesComponent
-
+    SpecialitesComponent,
+    
+   
   ],
   
   imports: [
@@ -54,8 +56,9 @@ import { SpecialitesComponent } from './specialites/specialites.component';
     MatFormFieldModule,
     MatSnackBarModule,
     MatInputModule,
-    MatButtonModule
-
+    MatButtonModule,
+    HttpClientModule,
+    MatButtonToggleModule
 
 
   ],
