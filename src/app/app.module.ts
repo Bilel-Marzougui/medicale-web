@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, Validators} from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -30,6 +30,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 
 
 
+ import {MatButtonToggleModule} from '@angular/material/button-toggle';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +47,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
     ListPatientComponent,
     SpecialitesComponent,
     
+   
 
   ],
   
@@ -61,6 +63,8 @@ import {MatSnackBar} from '@angular/material/snack-bar';
     MatSnackBarModule,
     MatInputModule,
     MatButtonModule,
+    HttpClientModule,
+    MatButtonToggleModule,
     ReactiveFormsModule,
     HttpClientModule,
 
