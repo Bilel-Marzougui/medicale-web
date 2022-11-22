@@ -16,7 +16,7 @@ body{
     margin-left: auto;
     margin-right: auto;
 	width: 450px;
-	height:1500px;
+	height:1300px;
 	overflow: hidden;
 	background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
 	background-color: white;
@@ -62,6 +62,10 @@ button:hover{
 #chk{
 	width: 30%;
 	height: 20px;
+	justify-content: center;
+    margin-right: 100px;
+
+	
 }
 .eyeicon{
 	display: flex;
@@ -69,3 +73,9 @@ button:hover{
 	margin-left: 390px;
 
 }
+/* .mat-snackBar{
+	justify-content: center;
+    color: #000;
+
+} */
+

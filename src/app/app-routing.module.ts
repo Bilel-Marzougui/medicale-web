@@ -9,7 +9,6 @@ import { LoginComponent } from './login/login.component';
 import { PrisedesrendezVousComponent } from './prisedesrendez-vous/prisedesrendez-vous.component';
 import { RegisterComponent } from './register/register.component';
 import {SpecialitesComponent} from './specialites/specialites.component'
-
 import { ListPatientComponent } from './list-patient/list-patient.component';
 import{AuthGuard} from './auth.guard';
 const routes: Routes = [

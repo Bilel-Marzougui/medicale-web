@@ -8,9 +8,10 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBarModule} from '@angular/material/snack-bar';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
@@ -24,6 +25,10 @@ import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { ListPatientComponent } from './list-patient/list-patient.component';
 import { SpecialitesComponent } from './specialites/specialites.component';
+import {MatSnackBar} from '@angular/material/snack-bar';
+
+
+
 
  import {MatButtonToggleModule} from '@angular/material/button-toggle';
 @NgModule({
@@ -43,6 +48,7 @@ import { SpecialitesComponent } from './specialites/specialites.component';
     SpecialitesComponent,
     
    
+
   ],
   
   imports: [
@@ -58,7 +64,13 @@ import { SpecialitesComponent } from './specialites/specialites.component';
     MatInputModule,
     MatButtonModule,
     HttpClientModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+
+   
+  
+
 
 
   ],
