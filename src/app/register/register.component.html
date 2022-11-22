@@ -1,41 +1,70 @@
+<app-header></app-header>
 <div class="my-container">
 <div class="main" >
   
-      <div class="w3-center w3-padding-64" id="Register">
+      <div class="w3-center w3-padding-64" id="Register" >
         <span class="w3-xlarge w3-bottombar w3-border-dark-grey w3-padding-16" style="font-weight: bold;">Register</span>
       </div>
-      <form class="w3-container" action="/action_page.php" target="_blank">
+      <form class="w3-container" action="/action_page.php" target="_blank" #f="ngForm" (ngSubmit)="add(f)" >
         <div class="w3-section">
           <label>Nom</label>
           <br>
-          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Nom" required>
+          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="nom" #nom ="ngModel" ngModel required>
+          <div class="alert alert-danger" *ngIf="nom.errors?.required && nom.touched">
+           Le nom est invalide
+          </div>
         </div>
         <div class="w3-section">
           <label>Prénom</label>
           <br>
-          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="Prénom" required>
+          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="text" name="prénom" #prenom ="ngModel" ngModel required>
+          <div class="alert alert-danger" *ngIf="prenom.errors?.required && prenom.touched">
+            Le prénom est invalide
+           </div>
         </div>
         <div class="w3-section">
           <label>Email</label>
           <br>
-          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Email" required>
-        </div>
+          <input id="email" class="form-control w3-input w3-border w3-hover-border-black" style="width:100%;" name="email" type ="email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"  required ngModel #email="ngModel">
+          <div class="alert alert-danger" role="alert" *ngIf="email.errors?.required && email.touched">
+
+            le contenu est vide
+
+          </div>
+
+          <div class="alert alert-danger" role="alert" *ngIf="email.errors?.pattern && email.touched">
+
+            le contenu est invalide
+
+          </div>
+
+          </div>
+        
      
       <div class="w3-section">
         <label>Mot de passe</label>
-        <br>
-        <input matInput [type]="showPassword ? 'text' : 'password'" name="password"class="w3-input w3-border w3-hover-border-black" style="width:100%;" [type]="showPassword?'password':'text'" name="Mot de passe" required>
-        <!-- <i class="fa fa-eye" matSuffix (click)="visibility()" >{{showPassword?'visibility_off':'visibility'}} </i> -->
-        <!-- <mat-icon matSuffix (click)="togglePasswordVisibility()">
-          {{showPassword?'visibility_off':'visibility'}}
-      </mat-icon> -->
+       <mat-form-field class="w3-input w3-border w3-hover-border-black" style="width:100%;">
+        <input id="motdepasse" name="motdepasse" matInput  type="{{(showPassword === false)?'password':'text'}}" #motdepasse="ngModel" ngModel required />
+        <mat-icon matSuffix style="cursor: pointer;" (click)="toggleShowPassword(showPassword)" >
+          {{!showPassword?'visibility':'visibility_off'}}</mat-icon>
+      </mat-form-field>
+      <div class="alert alert-danger" *ngIf="motdepasse.errors?.required && motdepasse.touched">
+        Le mot de passe est invalide
+       </div>
       </div>
       
+      
       <div class="w3-section">
-        <label>Confirmer Mot de passe</label>
+        <label>Confirmer mot de passe</label>
         <br>
-        <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" type="password"
-         name="Confirmer mot de passe" required>
+        <mat-form-field class="w3-input w3-border w3-hover-border-black" style="width:100%;">
+          <input id="confirmermotdepasse" name="confirmermotdepasse+"matInput type="{{(showConfirmPassword === false)?'password':'text'}}"  #confirmermotdepasse="ngModel" ngModel required/>
+          <mat-icon matSuffix style="cursor: pointer;" (click)="toggleShowConfirmedPassword(showConfirmPassword)" >
+            {{!showConfirmPassword?'visibility':'visibility_off'}}</mat-icon>
+        </mat-form-field>
+         <div class="alert alert-danger" *ngIf="confirmermotdepasse.errors?.required && confirmermotdepasse.touched">
+          Le Confirmer mot de passe est invalide
+         </div>
       </div>
     
       <div>Catégorie</div>
@@ -46,32 +75,43 @@
         <div class="w3-section">
           <label>Specialite</label>
           <br>
-          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Specialite" required>
+          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="specialite" #specialite ="ngModel" ngModel required>
+          <div class="alert alert-danger" *ngIf="specialite.errors?.required && specialite.touched">
+           Specialite est invalide
+           </div>
         </div>
         <br>
         <div class="w3-section">
-          <label>Adress</label>
+          <label>Adresse</label>
           <br>
-          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Specialite" required>
+          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="adresse" #adresse="ngModel" ngModel required>
+          <div class="alert alert-danger" *ngIf="adresse.errors?.required && adresse.touched">
+            Adresse est invalide
+           </div>
+        
         </div>
   
         <br>
         <div class="w3-section">
           <label>Contact</label>
           <br>
-          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Specialite" required>
+          <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="contact" #contact="ngModel" ngModel required>
+          <div class="alert alert-danger" *ngIf="contact.errors?.required && contact.touched">
+            Contact est invalide
+           </div>
         </div>
       </div>
     
 
-      <input type="checkbox" id="chk" aria-hidden="true" name="b" #b="ngModel"ngModel required ><p class="p" >I agree to the website terms and conditions</p>
-      <button type="submit"  [disabled]="b.invalid" class="w3-button w3-block w3-black">Enregistrer</button>
+      <input type="checkbox" style=" margin-left: 150px; margin-top: 50px; "id="chk" aria-hidden="true" name="b" #b="ngModel"ngModel required ><p class="p" >I agree to the website terms and conditions</p>
+      <button type="submit"  [disabled]="b.invalid" class="w3-button w3-block w3-black" (click)="opensweetalerte()" >Enregistrer</button>
     
     </form>
     
     <p class="p">Already have an account?<a routerLink="/login"> login here</a></p>
             
     </div>
+    <app-footer></app-footer>
 </div>
     
     
